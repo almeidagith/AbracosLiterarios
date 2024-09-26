@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraço Literário</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, section p, section ul { font-family: 'Times new Roman', sans-serif; color: #5b3c2d; }
+        body { background-color: #f4e9d5b7; line-height: 1.6; }
+        header, section, footer { padding: 20px; margin: 20px auto; max-width: 1200px; background-color: #fff; }
+        header { display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px #ffafaf(232, 7, 7); }
+        header img { width: 80px; }
+        nav ul { list-style: none; display: flex; margin: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { text-decoration: none; color: #5b3c2d; font-size: 1.1em; font-weight: bold; }
+        nav ul li a:hover { color: #4CAF50; }
+        .hero { 
+            background-image: url('./assests2/Abraço\ Literário.png'); /* URL da imagem de fundo */
+            background-size: cover; /* Faz com que a imagem cubra toda a seção */
+            background-position: center; /* Centraliza a imagem */
+            text-align: center; 
+            padding: 100px 20px; 
+            color: white; /* Cor do texto */
+        }
+        .hero h1 { font-size: 3em; color: #d7cece; } /* Cor do título */
+        .hero p { font-size: 1.2em; max-width: 600px; margin: 15px auto; }
+        section { border-radius: 8px; box-shadow: 0px 2px 8px #5b3c2d(0, 0, 0, 0.05); }
+        section h2 { font-size: 2em; margin-bottom: 20px; text-align: center; }
+        section ul { list-style-type: none; }
+        section ul li { padding: 10px 0; border-bottom: 1px solid #eee; }
+        footer { text-align: center; background-color: #5b3c2d; color: #fff; }
+        .socials { margin-top: 20px; }
+        .socials a { margin: 0 10px; }
+        .socials img { width: 60px; height: 60px; } /* Tamanho do ícone do Instagram */
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="./assests2/1727301785398 (1).png" alt="Logo Projeto">
+        <nav>
+            <ul>
+                <li><a href="#resumo">Resumo</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#atividades">Atividades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>"Tudo o que você pensa e sofre, dentro de um abraço se dissolve."</p>
+        <p>- Martha Medeiros</p>
+    </section>
+
+    <section id="resumo">
+        <h2>Resumo do Projeto</h2>
+        <p> &nbsp; &nbsp; &nbsp; Esse projeto quer ajudar a construir uma cidadania ativa usando a leitura. Começamos em 2023 com os “abraços literários” 
+            – encontros legais como oficinas de leitura, saraus e poesia nos muros.
+             Alunos do IFPB Campus Esperança e da EMEF José Souto, junto com seus professores, participam juntos dessas atividades.
+        </p>
+
+        <p> &nbsp; &nbsp; &nbsp; A ideia é aprender dentro e fora da sala de aula, dando vez e voz aos alunos. As leituras podem ser de obras conhecidas ou sugeridas 
+            pelos participantes. Tudo isso ajuda a unir pessoas e ideias de forma descontraída trazendo amizade, companheirismo e conhecimento após uma longa semana.
+        </p>
+            
+        <p> &nbsp; &nbsp; &nbsp; A base do projeto vem de estudos importantes que foram bem direcionados aos responsáveis onde queremos fortalecer a parceria entre as escolas, promovendo respeito, inclusão 
+            e a transformação de cada um e da sociedade!
+        </p>
+
+    </section>
+
+    <section id="objetivos">
+        <h2>Objetivos</h2>
+        <ul>
+            <li>&nbsp; &nbsp; &nbsp;O projeto visa formar cidadãos mais engajados, conscientes e participativos 
+                na sociedade, usando a leitura literária como ferramenta para alcançar esse objetivo.</li>
+            <ul>
+              <li>&nbsp; &nbsp; &nbsp;O projeto é baseado no conceito de relações dialógicas, ou seja, uma interação mútua e construtiva entre os participantes, 
+                onde todos têm voz e podem aprender uns com os outros.
+               </li>
+               <li>&nbsp; &nbsp; &nbsp;Esses diálogos ocorrem entre os discentes dos cursos técnicos integrados ao ensino médio do IFPB Campus Esperança e os estudantes 
+                da EMEF José Souto, uma escola da mesma cidade. Além dos alunos, educadores das duas instituições também estão envolvidos.
+                Essa interação entre alunos de diferentes instituições e níveis educacionais cria um espaço de troca de experiências e aprendizado 
+                conjunto, fortalecendo a ideia de cidadania e comunidade.</li>
+            </ul>
+          </ul>
+        
+    </section>
+
+    <section id="atividades">
+        <h2>Atividades</h2>
+        <ul id="listaAtividades"></ul> <!-- Aqui será inserido dinamicamente o conteúdo -->
+    </section>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/abracoliterariio?igsh=dHY2cXpoODUwbnEy" target="_blank">
+                <img src="./assests2/1727371174620.png" alt="Instagram">
+            </a>
+            <p>Nos siga no Instagram para se manter informado!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para adicionar atividades diretamente no HTML
+        function adicionarAtividade(nome, descricao) {
+            const listaAtividades = document.getElementById('listaAtividades'); // Seleciona o elemento da lista
+            const item = document.createElement('li'); // Cria um novo item de lista
+            item.textContent = `${nome}: ${descricao}`; // Define o conteúdo do item
+            listaAtividades.appendChild(item); // Adiciona o item à lista
+        }
+
+        // Adiciona atividades manualmente
+        adicionarAtividade('Oficinas de leitura', 'Oficinas para discutir livros, textos, músicas, vídeos, filmes literários.');
+        adicionarAtividade('Sarau literário', 'Eventos para declamação de poemas e textos literários daqueles que quiserem participar lendo, cantando, tocando, atuando ou só assistindo.');
+        adicionarAtividade('Poesia de muro', 'Atividades de criação de poesias, textos, músicas e tudo mais para exibição em murais de quem gostar de participar.');
+    </script>
+
+</body>
+</html>
